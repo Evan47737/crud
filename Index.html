@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-  
+
     <title>Document</title>
 </head>
 
@@ -25,17 +25,19 @@
             <input type="user" class="form-control" id="user" placeholder="usuario">
         </div>
         <label for="inputPassword5" class="form-label text-white">Contraseña</label>
-        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <input type="password" id="pass" class="form-control" aria-describedby="passwordHelpBlock">
         <div id="passwordHelpBlock" class="form-text text-white">
             Tu contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios,
             caracteres especiales ni emoji.
         </div>
         <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button">Entrar</button>
+            <button class="btn btn-primary" type="button" onclick="login()">Entrar</button>
         </div>
     </div>
 
-
+    <script src="js/firebase-app (1).js"></script>
+    <script src="js/firebase-auth.js"></script>
+    <script src="js/firebase-firestore.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/login.js"></script>
 </body>
