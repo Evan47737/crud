@@ -12,9 +12,108 @@
 
 <body class="bg-dark">
 
-    <p>entraste</p>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="">Agregar</a></li>
+                            <li><a class="dropdown-item" href="js/operaciones.js">Ver</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="js/operaciones.js">Modificar</a></li>
+                            <li><a class="dropdown-item" href="js/operaciones.js">Eliminar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Ventas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Agregar</a></li>
+                            <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Modificar</a></li>
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Deudas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Agregar</a></li>
+                            <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Modificar</a></li>
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Personal
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Agregar</a></li>
+                            <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Modificar</a></li>
+                            <li><a class="dropdown-item" href="#">Eliminar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
 
+    <div class="container" id="Ventanas">
+
+        <label for="Nombre de el Producto" class="form-label text-white">Nombre de el Producto</label>
+        <input type="text" class="form-control" id="nomproduct" placeholder="Producto Nombre" class="form-control n-2">
+        <label for="Precio de el Producto" class="form-label text-white">Precio de el Producto</label>
+        <input type="text" class="form-control" id="nomproduct" placeholder="Producto Precio" class="form-control n-2">
+        <label for="Precio Venta de el Producto" class="form-label text-white">Precio Venta de el Producto</label>
+        <input type="text" class="form-control" id="nomproduct" placeholder="Precio Venta" class="form-control n-2">
+        <label for="Categoria de el Producto" class="form-label text-white">Categoria de el Producto</label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Despensa</option>
+            <option value="1">Bebidas</option>
+            <option value="2">Dulces</option>
+            <option value="3">Botanas</option>
+        </select>
+        <div class="d-grid gap-2"> <button class="btn btn-primary" type="button" onclick="verregistro()">Agregar
+                Producto</button></div>
+    </div>
 
     <script src="js/firebase-app (1).js"></script>
     <script src="js/firebase-auth.js"></script>
