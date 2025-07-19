@@ -32,8 +32,8 @@
                             Productos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="">Agregar</a></li>
-                            <li><a class="dropdown-item" href="js/operaciones.js">Ver</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="verregistro()">Agregar</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="verproductos()">Ver</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -97,29 +97,20 @@
 
 
     <div class="container" id="Ventanas">
-
-        <label for="Nombre de el Producto" class="form-label text-white">Nombre de el Producto</label>
-        <input type="text" class="form-control" id="nomproduct" placeholder="Producto Nombre" class="form-control n-2">
-        <label for="Precio de el Producto" class="form-label text-white">Precio de el Producto</label>
-        <input type="text" class="form-control" id="nomproduct" placeholder="Producto Precio" class="form-control n-2">
-        <label for="Precio Venta de el Producto" class="form-label text-white">Precio Venta de el Producto</label>
-        <input type="text" class="form-control" id="nomproduct" placeholder="Precio Venta" class="form-control n-2">
-        <label for="Categoria de el Producto" class="form-label text-white">Categoria de el Producto</label>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Despensa</option>
-            <option value="1">Bebidas</option>
-            <option value="2">Dulces</option>
-            <option value="3">Botanas</option>
-        </select>
-        <div class="d-grid gap-2"> <button class="btn btn-primary" type="button" onclick="verregistro()">Agregar
-                Producto</button></div>
+        
     </div>
 
-    <script src="js/firebase-app (1).js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/firebase-app.js"></script>
     <script src="js/firebase-auth.js"></script>
     <script src="js/firebase-firestore.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/conexion.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/filtro.js"></script>
+    <script src="js/operaciones.js"></script>
+
 </body>
 
 </html>
