@@ -37,20 +37,49 @@ function buscarcate(cate){
         querySnapshot.forEach((doc) => {
            ventana.innerHTML+=`
            <div class="card m-2" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="${doc.data().Imagen}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">${doc.data().Producto}</h5>
                             <p class="card-text"><strong>id:</strong>${doc.id}</p>
-                            <p class="card-text"><strong>Nombre Producto:</strong>${doc.data().Producto}</p>
-                            <p class="card-text"><strong>Precio:$</strong>15</p>
-                            <p class="card-text"><strong>PrecioVenta:$</strong>22</p>
-                            <p class="card-text"><strong>Existencia de el Producto:</strong>20</p>
-                           <p class="card-text"><strong>Categoria de el Producto:</strong>Botana</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text"><strong>Precio:$</strong>${doc.data().Presio}</p>
+                            <p class="card-text"><strong>PrecioVenta:$</strong>${doc.data().PresioV}</p>
+                            <p class="card-text"><strong>Existencias:</strong>${doc.data().Existencia}</p>
+                           <p class="card-text"><strong>Categoria:</strong>${doc.data().Categoria}</p>
+                          
                         </div>
                     </div>
            `;
-           
+          
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+}
+
+function buscarnom(){
+        let ventana = document.getElementById('resultadobus');
+        let busqueda=document.getElementById('busqueda').value;
+        ventana.innerHTML='';
+        db.collection("Productos").where("Producto", "==", busqueda)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+           ventana.innerHTML+=`
+           <div class="card m-2" style="width: 18rem;">
+                        <img src="${doc.data().Imagen}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${doc.data().Producto}</h5>
+                            <p class="card-text"><strong>id:</strong>${doc.id}</p>
+                            <p class="card-text"><strong>Precio:$</strong>${doc.data().Presio}</p>
+                            <p class="card-text"><strong>PrecioVenta:$</strong>${doc.data().PresioV}</p>
+                            <p class="card-text"><strong>Existencias:</strong>${doc.data().Existencia}</p>
+                           <p class="card-text"><strong>Categoria:</strong>${doc.data().Categoria}</p>
+                         
+                        </div>
+                    </div>
+           `;
+          
         });
     })
     .catch((error) => {

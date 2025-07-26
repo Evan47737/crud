@@ -2,7 +2,7 @@ function verregistro() {
 
     let ventana = document.getElementById('Ventanas');
 
-    ventana.innerHTML= `
+    ventana.innerHTML = `
     <label for="Nombre de el Producto" class="form-label text-white m-2">Nombre de el Producto</label>
         <input type="text" class="form-control" id="inproducto" placeholder="Producto Nombre" class="form-control m-2">
 
@@ -53,15 +53,15 @@ function verproductos() {
 
     let ventana = document.getElementById('Ventanas');
 
-    ventana.innerHTML= `
-    <div class="d-flex flex-row justify-content-between m-2">
+    ventana.innerHTML = `
+      <div class="d-flex flex-row justify-content-between m-2">
             <div class="col-3">
-                <button class="btn btn-primary w-100 m-2">Categoria1</button>
-                <button class="btn btn-primary w-100 m-2">Categoria2</button>
-                <button class="btn btn-primary w-100 m-2">Categoria3</button>
-                <button class="btn btn-primary w-100 m-2">Categoria4</button>
+                <button class="btn btn-primary w-100 m-2" onclick="buscarcate('bebida')">Bebidas</button>
+                <button class="btn btn-primary w-100 m-2" onclick="buscarcate('dulce')">Dulces</button>
+                <button class="btn btn-primary w-100 m-2" onclick="buscarcate('botana')">Botanas</button>
+                <button class="btn btn-primary w-100 m-2" onclick="buscarcate('despenza')">Despenza</button>
                 <input type="text" class="form-control m-2" id="busqueda" placeholder="Buscar por nombre">
-                <button class="btn btn-primary w-100 m-2">Buscar1</button>
+                <button class="btn btn-primary w-100 m-2"  onclick="buscarnom()">Buscar1</button>
             </div>
             <div class="col-9">
                 <div class="d-flex flex-row justify-content-evenly flex-wrap" id="resultadobus">
