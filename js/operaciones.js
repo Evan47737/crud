@@ -1,4 +1,4 @@
-const db = firebase.firestore();
+
 
 function agregarprod(){
     let producto=document.getElementById('inproducto').value;

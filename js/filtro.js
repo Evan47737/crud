@@ -1,3 +1,5 @@
+const db = firebase.firestore();
+
 function verregistro() {
 
     let ventana = document.getElementById('Ventanas');
@@ -50,7 +52,7 @@ function verregistro() {
 }
 
 function verproductos() {
-
+const db = firebase.firestore();
     let ventana = document.getElementById('Ventanas');
 
     ventana.innerHTML = `
@@ -61,7 +63,7 @@ function verproductos() {
                 <button class="btn btn-primary w-100 m-2" onclick="buscarcate('botana')">Botanas</button>
                 <button class="btn btn-primary w-100 m-2" onclick="buscarcate('despenza')">Despenza</button>
                 <input type="text" class="form-control m-2" id="busqueda" placeholder="Buscar por nombre">
-                <button class="btn btn-primary w-100 m-2"  onclick="buscarnom()">Buscar1</button>
+                <button class="btn btn-primary w-100 m-2"  onclick="buscarnom()">Buscar</button>
             </div>
             <div class="col-9">
                 <div class="d-flex flex-row justify-content-evenly flex-wrap" id="resultadobus">
@@ -70,4 +72,24 @@ function verproductos() {
             </div>
         </div>
     `;
+     let productos = [];
+  db.collection("Productos")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        productos.push(doc.data().Producto);
+      });
+    }
+ 
+    )
+    .catch((error) => {
+      console.log("Error getting documents: ", error);
+    });
+ 
+ 
+  $("#busqueda").autocomplete({
+    source: productos,
+    minLength: 3
+  });
+ 
 }
