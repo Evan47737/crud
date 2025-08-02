@@ -135,10 +135,29 @@ function Actualizar() {
         Categoria: categoria
     })
         .then(() => {
-            console.log("Document successfully updated!");
+            alert("Se actualizo correctamente");
         })
         .catch((error) => {
             // The document probably doesn't exist.
             console.error("Error updating document: ", error);
         });
+}
+
+function Eliminarprod() {
+
+    let idprod = document.getElementById('idprod').value;
+
+    let confirmard = confirm("¿Seguro que deseas eliminar el Producto?");
+
+    if (confirmard == true) {
+
+        db.collection("Productos").doc(idprod).delete().then(() => {
+            alert("El producto se elimino correctamente");
+        }).catch((error) => {
+           alert("Error al eliminar al producto"+ error);
+        });
+
+    } else {
+        alert("No se elimino el producto");
+    }
 }

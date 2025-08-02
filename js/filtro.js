@@ -153,3 +153,15 @@ function modificarpro() {
                 Producto</button>
     `;
 }
+
+function eliminarprod() {
+    let espacio=document.getElementById('Ventanas');
+
+    espacio.innerHTML='';
+    espacio.innerHTML=`
+    <input type="text" class="form-control" id="idprod" placeholder="Producto Id" class="form-control m-2">
+
+    <button class="btn btn-danger w-100 m-2" type="button" onclick="Eliminarprod()">Eliminar
+                Producto</button>
+    `
+}
